@@ -1,267 +1,93 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>MainPS - AYO MAIN PLAYSTATION</title>
-  <style>
-    :root{
-      --bg1: #0f1724;
-      --bg2: #0b1220;
-      --accent: #2dd4bf;
-      --accent-2: #60a5fa;
-      --card: rgba(255,255,255,0.04);
-      --glass: rgba(255,255,255,0.06);
-    }
-    *{box-sizing:border-box}
-    html,body{height:100%}
-    body{
-      margin:0;
-      font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
-      background: radial-gradient(1200px 600px at 10% 10%, rgba(45,212,191,0.06), transparent),
-                  radial-gradient(1000px 500px at 90% 90%, rgba(96,165,250,0.04), transparent),
-                  linear-gradient(180deg,var(--bg1),var(--bg2));
-      color:#e6eef8;
-      -webkit-font-smoothing:antialiased;
-      -moz-osx-font-smoothing:grayscale;
-      padding:32px;
-      display:flex;
-      align-items:center;
-      justify-content:center;
-    }
-    .wrap{
-      width:100%;
-      max-width:980px;
-      background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
-      border-radius:14px;
-      padding:28px;
-      box-shadow: 0 10px 30px rgba(2,6,23,0.6);
-      border: 1px solid rgba(255,255,255,0.03);
-      backdrop-filter: blur(6px);
-    }
-    header{
-      display:flex;
-      align-items:center;
-      justify-content:space-between;
-      gap:16px;
-      margin-bottom:22px;
-    }
-    .brand{
-      display:flex;
-      gap:12px;
-      align-items:center;
-    }
-    .logo{
-      width:52px;
-      height:52px;
-      background: linear-gradient(135deg,var(--accent),var(--accent-2));
-      border-radius:10px;
-      display:grid;
-      place-items:center;
-      font-weight:700;
-      color:#04263a;
-      box-shadow: 0 6px 18px rgba(30,64,175,0.14);
-    }
-    .brand h1{font-size:18px;margin:0}
-    nav{display:flex;gap:12px;align-items:center}
-    nav a{
-      color:rgba(255,255,255,0.75);
-      text-decoration:none;
-      font-size:14px;
-      padding:8px 12px;
-      border-radius:8px;
-    }
-    nav a.cta{
-      background:linear-gradient(90deg,var(--accent),var(--accent-2));
-      color:#04263a;font-weight:600;
-    }
-    main{
-      display:grid;
-      grid-template-columns: 1fr 380px;
-      gap:22px;
-      align-items:start;
-    }
-    .hero{
-      padding:22px;
-    }
-    .kicker{
-      display:inline-block;
-      font-size:13px;
-      background:var(--card);
-      color:var(--accent);
-      padding:6px 10px;border-radius:999px;
-      margin-bottom:12px;
-    }
-    h2{
-      margin:0 0 12px 0;
-      font-size:34px;
-      line-height:1.02;
-    }
-    .lead{
-      margin:0 0 18px 0;
-      color:rgba(230,238,248,0.85);
-      font-size:16px;
-    }
-    .cta-row{display:flex;gap:12px;flex-wrap:wrap}
-    .btn{
-      padding:12px 16px;border-radius:10px;border:0;cursor:pointer;font-weight:700;
-      background:linear-gradient(90deg,var(--accent),var(--accent-2));
-      color:#04263a;
-      box-shadow: 0 8px 20px rgba(45,212,191,0.12);
-    }
-    .btn.ghost{
-      background:transparent;color:rgba(230,238,248,0.9);border:1px solid rgba(255,255,255,0.06);
-    }
-    .card{
-      background:var(--glass);
-      padding:18px;border-radius:12px;border:1px solid rgba(255,255,255,0.03);
-    }
-    .side-hero{
-      display:flex;flex-direction:column;gap:16px;
-    }
-    .tv{
-      background:
-        linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
-      border-radius:12px;padding:18px;display:flex;flex-direction:column;gap:8px;align-items:center;
-    }
-    .screen{
-      width:100%;
-      height:180px;
-      display:grid;place-items:center;
-      border-radius:8px;
-      background:
-        conic-gradient(from 220deg at 50% 50%, rgba(96,165,250,0.18), rgba(45,212,191,0.12));
-      position:relative;overflow:hidden;
-    }
-    .screen .text{
-      text-align:center;
-      font-weight:800;font-size:20px;color:#021126;
-      text-shadow: 0 1px 0 rgba(255,255,255,0.25);
-    }
-    .info-list{display:flex;flex-direction:column;gap:8px}
-    .info{display:flex;justify-content:space-between;align-items:center;font-size:14px}
-    footer{margin-top:18px;display:flex;justify-content:space-between;align-items:center;color:rgba(230,238,248,0.6);font-size:13px}
-    .small{font-size:13px;color:rgba(230,238,248,0.7)}
-    .controls{
-      display:flex;gap:10px;align-items:center;margin-top:8px;
-    }
-    .controller{
-      width:44px;height:44px;border-radius:8px;background:rgba(255,255,255,0.03);display:grid;place-items:center;font-weight:700;font-size:18px;
-    }
-    @media (max-width:900px){
-      main{grid-template-columns: 1fr; }
-      .screen{height:160px}
-    }
-
-    /* little accent animation */
-    .sparkle{
-      position:absolute;right:-40px;top:-40px;width:160px;height:160px;border-radius:50%;
-      background: radial-gradient(circle at 30% 30%, rgba(255,255,255,0.06), transparent 35%),
-                  radial-gradient(circle at 70% 70%, rgba(255,255,255,0.03), transparent 45%);
-      transform: rotate(25deg);
-      filter: blur(10px);opacity:0.9;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MAIN PS KOCAGAN!</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', sans-serif;
+            background: radial-gradient(circle at top left, #0f1724, #0b1220);
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            flex-direction: column;
+            text-align: center;
+        }
+        h1 {
+            font-size: 48px;
+            margin: 0 0 20px 0;
+            color: #2dd4bf;
+            text-shadow: 2px 2px #060c14;
+        }
+        p {
+            font-size: 20px;
+            color: #60a5fa;
+            margin: 0 0 30px 0;
+        }
+        .box {
+            background: rgba(255,255,255,0.05);
+            padding: 30px 50px;
+            border-radius: 15px;
+            border: 1px solid rgba(255,255,255,0.1);
+            box-shadow: 0 0 30px rgba(45,212,191,0.2);
+        }
+        button {
+            background: linear-gradient(90deg,#2dd4bf,#60a5fa);
+            border: none;
+            padding: 12px 24px;
+            border-radius: 12px;
+            font-size: 18px;
+            font-weight: bold;
+            cursor: pointer;
+            color: #04263a;
+            margin: 5px;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        button:hover {
+            transform: scale(1.1);
+            box-shadow: 0 8px 25px rgba(45,212,191,0.5);
+        }
+        .fun-text {
+            font-size: 16px;
+            color: #facc15;
+            margin-top: 20px;
+            animation: blink 1s infinite;
+        }
+        @keyframes blink {
+            0%, 50%, 100% {opacity:1;}
+            25%, 75% {opacity:0.3;}
+        }
+    </style>
 </head>
 <body>
-  <div class="wrap" role="main">
-    <header>
-      <div class="brand">
-        <div class="logo">PS</div>
-        <div>
-          <h1>MainPS</h1>
-          <div class="small">Gabung dan main bareng sekarang</div>
-        </div>
-      </div>
-      <nav>
-        <a href="#about">Tentang</a>
-        <a href="#how">Cara Main</a>
-        <a class="cta" href="#play">MAIN SEKARANG</a>
-      </nav>
-    </header>
+    <div class="box">
+        <h1>AYO MAIN PS!! 🎮</h1>
+        <p>DAN JANGAN LUPA: SLEDING-SLEDING DILARANG KERAS 😎</p>
+        <button id="playBtn">▶ MAIN SEKARANG</button>
+        <button id="inviteBtn">🔗 Undang Teman</button>
+        <div class="fun-text">Kalau kalah jangan nangis ya, ngakak aja!! 😂</div>
+    </div>
 
-    <main>
-      <section class="hero">
-        <span class="kicker">Siap Untuk Game?</span>
-        <h2>AYO KITA MAIN PLAYSTATION</h2>
-        <p class="lead">DAN JANGAN SLEDING SLEDING. Kumpul, main, tertawa - sederhana tapi bermakna. Yuk mulai sesi bareng temanmu sekarang juga.</p>
+    <script>
+        document.getElementById('playBtn').addEventListener('click', function() {
+            alert('Siap!! Saatnya MAIN PS dan ketawa bareng teman-teman! 🎮😆');
+        });
 
-        <div class="cta-row">
-          <button class="btn" id="playBtn">▶ MAIN SEKARANG</button>
-          <button class="btn ghost" id="inviteBtn">🔗 Undang Teman</button>
-        </div>
-
-        <div style="height:18px"></div>
-
-        <div class="card">
-          <strong>Kenapa Main di MainPS?</strong>
-          <ul style="margin:10px 0 0 18px;">
-            <li>Connect mudah - cukup klik & gabung.</li>
-            <li>Mode santai, no drama.</li>
-            <li>Event mingguan dan challenge berhadiah.</li>
-          </ul>
-        </div>
-
-        <footer>
-          <div class="small">© MainPS - Semua Hak Dilindungi</div>
-          <div class="small">Versi demo • Tidak perlu registrasi</div>
-        </footer>
-      </section>
-
-      <aside class="side-hero">
-        <div class="tv card">
-          <div class="screen" aria-hidden="true">
-            <div class="sparkle" style="opacity:0.25"></div>
-            <div class="text">PLAY MODE</div>
-          </div>
-
-          <div style="width:100%;display:flex;justify-content:space-between;align-items:center;margin-top:8px">
-            <div>
-              <div style="font-weight:700">Sesi Aktif</div>
-              <div style="color:rgba(230,238,248,0.7)">12 pemain online</div>
-            </div>
-            <div style="text-align:right">
-              <div style="font-weight:700">Next Event</div>
-              <div style="color:rgba(230,238,248,0.7)">Hari ini 20:00</div>
-            </div>
-          </div>
-
-          <div class="controls">
-            <div class="controller">▲</div>
-            <div class="controller">◀︎</div>
-            <div class="controller">●</div>
-            <div class="controller">▶︎</div>
-          </div>
-        </div>
-
-        <div class="card">
-          <div style="display:flex;justify-content:space-between;align-items:center">
-            <strong>Info Singkat</strong>
-            <span style="font-size:12px;color:rgba(230,238,248,0.6)">Terbaru</span>
-          </div>
-          <div style="margin-top:10px" class="info-list">
-            <div class="info"><span>Mode Santai</span><span class="small">Recommended</span></div>
-            <div class="info"><span>Chat Suara</span><span class="small">Aktif</span></div>
-            <div class="info"><span>Event Minggu</span><span class="small">Pendaftaran Terbuka</span></div>
-          </div>
-        </div>
-      </aside>
-    </main>
-  </div>
-
-  <script>
-    document.getElementById('playBtn').addEventListener('click', function(){
-      alert('Siap! AYO KITA MAIN PLAYSTATION - DAN JANGAN SLEDING SLEDING.');
-    });
-    document.getElementById('inviteBtn').addEventListener('click', function(){
-      const url = location.href;
-      navigator.clipboard?.writeText(url).then(()=> {
-        alert('Link sesi disalin! Bagikan ke temanmu.');
-      }).catch(()=> {
-        prompt('Copy link ini:', url);
-      });
-    });
-  </script>
+        document.getElementById('inviteBtn').addEventListener('click', function() {
+            const url = location.href;
+            if (navigator.clipboard) {
+                navigator.clipboard.writeText(url).then(() => {
+                    alert('Link sesi disalin! Share ke teman-temanmu 😎');
+                });
+            } else {
+                prompt('Copy link ini:', url);
+            }
+        });
+    </script>
 </body>
-
 </html>
