@@ -1,93 +1,156 @@
+
 <!DOCTYPE html>
 <html lang="id">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MAIN PS KOCAGAN!</title>
-    <style>
-        body {
-            margin: 0;
-            padding: 0;
-            font-family: 'Segoe UI', sans-serif;
-            background: radial-gradient(circle at top left, #0f1724, #0b1220);
-            color: #fff;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            flex-direction: column;
-            text-align: center;
-        }
-        h1 {
-            font-size: 48px;
-            margin: 0 0 20px 0;
-            color: #2dd4bf;
-            text-shadow: 2px 2px #060c14;
-        }
-        p {
-            font-size: 20px;
-            color: #60a5fa;
-            margin: 0 0 30px 0;
-        }
-        .box {
-            background: rgba(255,255,255,0.05);
-            padding: 30px 50px;
-            border-radius: 15px;
-            border: 1px solid rgba(255,255,255,0.1);
-            box-shadow: 0 0 30px rgba(45,212,191,0.2);
-        }
-        button {
-            background: linear-gradient(90deg,#2dd4bf,#60a5fa);
-            border: none;
-            padding: 12px 24px;
-            border-radius: 12px;
-            font-size: 18px;
-            font-weight: bold;
-            cursor: pointer;
-            color: #04263a;
-            margin: 5px;
-            transition: transform 0.2s, box-shadow 0.2s;
-        }
-        button:hover {
-            transform: scale(1.1);
-            box-shadow: 0 8px 25px rgba(45,212,191,0.5);
-        }
-        .fun-text {
-            font-size: 16px;
-            color: #facc15;
-            margin-top: 20px;
-            animation: blink 1s infinite;
-        }
-        @keyframes blink {
-            0%, 50%, 100% {opacity:1;}
-            25%, 75% {opacity:0.3;}
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>WUJUD4D</title>
+
+<style>
+*{box-sizing:border-box;}
+body{
+    margin:0;
+    background:#000;
+    font-family:Arial, sans-serif;
+    color:#fff;
+}
+.wrapper{
+    max-width:420px;
+    margin:auto;
+    padding:12px;
+    background:linear-gradient(180deg,#111,#000);
+}
+.header{
+    text-align:center;
+    font-size:22px;
+    font-weight:bold;
+    letter-spacing:1px;
+    color:#ffd700;
+    margin-bottom:10px;
+}
+.photo img{
+    width:100%;
+    border-radius:10px;
+    display:block;
+    box-shadow:0 0 20px rgba(255,215,0,0.4);
+}
+.banner{
+    background:linear-gradient(90deg,#3a2c00,#ffd700,#3a2c00);
+    color:#000;
+    text-align:center;
+    padding:10px;
+    margin:12px 0;
+    border-radius:8px;
+    font-weight:bold;
+}
+.buttons{
+    display:flex;
+    gap:10px;
+    margin-bottom:16px;
+}
+.buttons a{
+    flex:1;
+    text-align:center;
+    padding:14px;
+    text-decoration:none;
+    font-weight:bold;
+    border-radius:10px;
+    position:relative;
+    z-index:1;
+}
+
+/* 🔥🔥🔥 DAFTAR AURA SUPER MENYALA */
+.daftar{
+    background:linear-gradient(#ffe066,#ffb700);
+    color:#000;
+    animation: glow 1.2s infinite ease-in-out;
+}
+
+/* AURA PALING TERANG */
+@keyframes glow{
+    0%{
+        box-shadow:
+            0 0 10px rgba(255,215,0,0.6),
+            0 0 25px rgba(255,215,0,0.6),
+            0 0 45px rgba(255,215,0,0.4);
+    }
+    50%{
+        box-shadow:
+            0 0 18px rgba(255,215,0,0.95),
+            0 0 40px rgba(255,215,0,0.9),
+            0 0 70px rgba(255,215,0,0.8),
+            0 0 100px rgba(255,215,0,0.6);
+    }
+    100%{
+        box-shadow:
+            0 0 12px rgba(255,215,0,0.7),
+            0 0 30px rgba(255,215,0,0.7),
+            0 0 55px rgba(255,215,0,0.5);
+    }
+}
+
+.login{
+    background:linear-gradient(#222,#000);
+    color:#ffd700;
+    border:1px solid #ffd700;
+}
+
+/* INFO PUTIH */
+.info{
+    background:#0c0c0c;
+    padding:14px;
+    font-size:14px;
+    border-radius:8px;
+    border:1px solid #333;
+    color:#ffffff;
+    line-height:1.6;
+}
+
+.footer{
+    text-align:center;
+    font-size:11px;
+    margin-top:10px;
+    color:#aaa;
+}
+</style>
 </head>
+
 <body>
-    <div class="box">
-        <h1>AYO MAIN PS!! 🎮</h1>
-        <p>DAN JANGAN LUPA: SLEDING-SLEDING DILARANG KERAS 😎</p>
-        <button id="playBtn">▶ MAIN SEKARANG</button>
-        <button id="inviteBtn">🔗 Undang Teman</button>
-        <div class="fun-text">Kalau kalah jangan nangis ya, ngakak aja!! 😂</div>
+
+<div class="wrapper">
+
+    <div class="header"></div>
+
+    <!-- FOTO BISA DIKLIK -->
+    <a href="https://puan.me/rspwhv">
+        <div class="photo">
+            <img src="https://gifyu.com/image/bm8dr" alt="Promo WUJUD4D" loading="lazy">
+        </div>
+    </a>
+
+    <div class="banner">
+        Slot Gacor Terpercaya #1<br>
+        se-INDONESIA
     </div>
 
-    <script>
-        document.getElementById('playBtn').addEventListener('click', function() {
-            alert('Siap!! Saatnya MAIN PS dan ketawa bareng teman-teman! 🎮😆');
-        });
+    <!-- TOMBOL -->
+    <div class="buttons">
+        <a href="https://wujud4d2.org/?utm_medium=social&utm_source=heylink.me">DAFTAR</a>
+        <a href="https://wujud4d2.org/?utm_medium=social&utm_source=heylink.me">LOGIN</a>
+    </div>
 
-        document.getElementById('inviteBtn').addEventListener('click', function() {
-            const url = location.href;
-            if (navigator.clipboard) {
-                navigator.clipboard.writeText(url).then(() => {
-                    alert('Link sesi disalin! Share ke teman-temanmu 😎');
-                });
-            } else {
-                prompt('Copy link ini:', url);
-            }
-        });
-    </script>
+    <div class="info">
+        Nama: WUJUD4D<br>
+        Payment: QRIS , Bank Transfer & E-Wallet<br>
+        Deposit: Rp 10.000<br>
+        Withdraw: Rp 50.000
+    </div>
+
+    <div class="footer">
+        Server Thailand Resmi | Rtp 99,9%
+    </div>
+
+</div>
+
 </body>
 </html>
