@@ -1,250 +1,392 @@
+
 <!DOCTYPE html>
-<html lang="id">
+<html amp lang="en-ID">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>WUJUD4D</title>
+<meta charset="utf-8" />
+   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+   <title>WUJUD4D - SLOT GACOR</title>
+   <link rel="icon" href="favicon32_fix.png" type="image/png">
+   <meta name="description" content="#" />
+   <meta name="keywords" content="SLOT GACOR"/>
+   <meta name="robots" content="index,follow" />
+   <link href="https://api2-lgn.imgnxb.com/images/DODg14ohngA/favicon_b39e9a90-861b-40ea-948f-d82eb974763d_1767523789190.png" rel="shortcut icon"p type="image/x-icon" />
+   <link rel="canonical" href="https://starlight1688.pages.dev/" />
+   <meta property="og:url" content="#" />
+   <meta property="og:site_name" content="SLOT GACOR" />
+   <meta property="og:image:alt" content="SLOT GACOR" />
+   <meta property="og:image" content="https://api2-lgn.imgnxb.com/images/DODg14ohngA/favicon_b39e9a90-861b-40ea-948f-d82eb974763d_1767523789190.png" />
 
-<style>
-*{margin:0;padding:0;box-sizing:border-box;}
-body{
-    font-family:'Segoe UI',sans-serif;
-    background:#050505;
-    color:white;
-    overflow-x:hidden;
-}
+   <link rel="preload" as="script" href="https://cdn.ampproject.org/v0.js" />
+   <script async src="https://cdn.ampproject.org/v0.js"></script>
+   <style amp-boilerplate>
+      body {
+         -webkit-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
+         -moz-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
+         -ms-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
+         animation: -amp-start 8s steps(1, end) 0s 1 normal both
+      }
 
-/* LOADER */
-#loader{
-    position:fixed;
-    width:100%;
-    height:100%;
-    background:#000;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    z-index:9999;
-}
-.loader-text{
-    color:#ff1a1a;
-    font-size:24px;
-    animation:blink 1s infinite;
-}
-@keyframes blink{50%{opacity:0.5;}}
+      @-webkit-keyframes -amp-start {
+         from {
+            visibility: hidden
+         }
 
-/* NAVBAR */
-header{
-    position:sticky;
-    top:0;
-    display:flex;
-    justify-content:space-between;
-    padding:20px 40px;
-    background:#000;
-    z-index:1000;
-}
-.logo{
-    font-size:26px;
-    color:#ff1a1a;
-    font-weight:bold;
-}
+         to {
+            visibility: visible
+         }
+      }
 
-/* HERO */
-.hero{
-    text-align:center;
-    padding:120px 20px;
-    background:linear-gradient(180deg,#1a0000,#000);
-}
-.hero h1{
-    font-size:55px;
-    color:#ff1a1a;
-}
-.hero p{margin:15px 0;opacity:0.85;}
+      @-moz-keyframes -amp-start {
+         from {
+            visibility: hidden
+         }
 
-/* BUTTON */
-.btn{
-    padding:15px 35px;
-    margin:10px;
-    border-radius:30px;
-    border:none;
-    cursor:pointer;
-    font-weight:bold;
-}
-.primary{background:#ff1a1a;color:white;}
-.secondary{border:2px solid #ff1a1a;background:transparent;color:#ff1a1a;}
+         to {
+            visibility: visible
+         }
+      }
 
-/* PARTICLE BG */
-canvas{
-    position:fixed;
-    top:0;
-    left:0;
-    z-index:-1;
-}
+      @-ms-keyframes -amp-start {
+         from {
+            visibility: hidden
+         }
 
-/* STATS */
-.stats{
-    display:flex;
-    justify-content:center;
-    gap:40px;
-    padding:40px;
-}
-.stat{
-    text-align:center;
-}
-.stat h2{color:#ff1a1a;}
+         to {
+            visibility: visible
+         }
+      }
 
-/* SECTION */
-.section{
-    padding:70px 20px;
-    text-align:center;
-}
-.cards{
-    display:flex;
-    flex-wrap:wrap;
-    justify-content:center;
-}
-.card{
-    width:260px;
-    margin:15px;
-    padding:25px;
-    border-radius:15px;
-    background:#140000;
+      @-o-keyframes -amp-start {
+         from {
+            visibility: hidden
+         }
+
+         to {
+            visibility: visible
+         }
+      }
+
+      @keyframes -amp-start {
+         from {
+            visibility: hidden
+         }
+
+         to {
+            visibility: visible
+         }
+      }
+   </style>
+   <noscript>
+      <style amp-boilerplate>
+         body {
+            -webkit-animation: none;
+            -moz-animation: none;
+            -ms-animation: none;
+            animation: none
+         }
+      </style>
+   </noscript>
+
+   <style amp-custom>
+	   .poster-wrap {
+  position: relative;
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto 14px auto;
+  z-index: 1;
 }
 
-/* FORM */
-.form-box{
-    max-width:400px;
-    margin:auto;
-}
-input{
-    width:100%;
-    padding:12px;
-    margin:10px 0;
-    border:none;
-    border-radius:8px;
-}
-.submit{
-    width:100%;
-    padding:12px;
-    background:#ff1a1a;
-    color:white;
-    border:none;
-    border-radius:8px;
+.poster-wrap::before {
+  content: "";
+  position: absolute;
+  inset: -18px;
+  z-index: -2;
+  border-radius: 26px;
+  background:
+    radial-gradient(circle at 50% 0%, rgba(255,180,60,0.35), transparent 30%),
+    radial-gradient(circle at 20% 30%, rgba(255,80,0,0.30), transparent 28%),
+    radial-gradient(circle at 80% 28%, rgba(255,60,0,0.28), transparent 28%),
+    radial-gradient(circle at 15% 85%, rgba(255,120,0,0.20), transparent 24%),
+    radial-gradient(circle at 85% 88%, rgba(255,90,0,0.20), transparent 24%),
+    radial-gradient(circle at 50% 100%, rgba(255,40,0,0.22), transparent 30%);
+  filter: blur(16px);
+  opacity: 0.95;
+  animation: fireAura 3.2s ease-in-out infinite alternate;
 }
 
-/* FAQ */
-.faq{max-width:600px;margin:auto;text-align:left;}
-.faq h4{margin-top:15px;}
-
-/* FOOTER */
-footer{
-    text-align:center;
-    padding:20px;
-    background:#000;
+.poster-wrap::after {
+  content: "";
+  position: absolute;
+  inset: -8px;
+  z-index: -1;
+  border-radius: 22px;
+  background:
+    linear-gradient(180deg,
+      rgba(255,180,50,0.10) 0%,
+      rgba(255,80,0,0.18) 30%,
+      rgba(255,30,0,0.10) 65%,
+      rgba(255,140,0,0.08) 100%);
+  box-shadow:
+    0 0 18px rgba(255, 90, 0, 0.35),
+    0 0 36px rgba(255, 40, 0, 0.18),
+    0 0 52px rgba(255, 160, 0, 0.12);
+  animation: firePulse 2.4s ease-in-out infinite;
 }
-</style>
+
+@keyframes fireAura {
+  0% {
+    transform: scale(0.98);
+    filter: blur(14px);
+    opacity: 0.78;
+  }
+  100% {
+    transform: scale(1.03);
+    filter: blur(20px);
+    opacity: 1;
+  }
+}
+
+@keyframes firePulse {
+  0% {
+    opacity: 0.70;
+    transform: scale(0.995);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1.01);
+  }
+}
+      * {
+         box-sizing: border-box;
+      }
+
+      body {
+         font-family: monospace;
+         position: relative;
+         background: #000000;
+         background-image: radial-gradient(#272727 5%, transparent 50%);
+         background-size: 5px 5px;
+         background-attachment: fixed;
+      }
+
+     .container {
+  max-width: 400px;
+  min-height: 100vh;
+  margin: 0 auto;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+	   .container {
+  position: relative;
+  overflow: hidden;
+}
+
+.container::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background:
+    radial-gradient(circle at left center, rgba(255,70,0,0.16), transparent 22%),
+    radial-gradient(circle at right center, rgba(255,70,0,0.16), transparent 22%),
+    radial-gradient(circle at top center, rgba(255,140,0,0.10), transparent 20%),
+    radial-gradient(circle at bottom center, rgba(255,70,0,0.12), transparent 22%);
+  filter: blur(14px);
+  opacity: 0.9;
+}
+
+header,
+.poster-wrap,
+.btn-livechat,
+.info-box,
+.copyright {
+  position: relative;
+  z-index: 1;
+}
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background:
+    radial-gradient(circle at left center, rgba(255,70,0,0.16), transparent 22%),
+    radial-gradient(circle at right center, rgba(255,70,0,0.16), transparent 22%),
+    radial-gradient(circle at top center, rgba(255,140,0,0.10), transparent 20%),
+    radial-gradient(circle at bottom center, rgba(255,70,0,0.12), transparent 22%);
+  filter: blur(14px);
+  opacity: 0.9;
+}
+
+.banner {
+  display: block;
+  width: 100%;
+  max-width: 380px;
+  margin: 0 auto;
+  border-radius: 12px;
+  box-shadow:
+    0 0 10px rgba(255, 0, 0, 0.15),
+    0 0 20px rgba(255, 0, 0, 0.08);
+}
+
+.btn-livechat {
+  display: block;
+  width: 100%;
+  max-width: 380px;
+  margin: 10px auto 0 auto;
+  padding: 10px;
+  color: #fff;
+  font-size: 20px;
+  font-weight: bold;
+  text-decoration: none;
+  text-align: center;
+  background: #111111;
+  border: 1px solid rgba(255, 80, 80, 0.45);
+  border-radius: 12px;
+  position: relative;
+  z-index: 2;
+  box-sizing: border-box;
+  overflow: hidden;
+  isolation: isolate;
+  box-shadow:
+    0 0 10px rgba(255, 0, 0, 0.35),
+    0 0 22px rgba(255, 0, 0, 0.20);
+}
+
+.btn-livechat::before {
+  content: "";
+  position: absolute;
+  inset: -55%;
+  background: conic-gradient(
+    from 0deg,
+    transparent 0deg,
+    transparent 270deg,
+    rgba(255, 0, 0, 1) 300deg,
+    rgba(255, 180, 180, 1) 330deg,
+    rgba(255, 0, 0, 1) 360deg
+  );
+  animation: putarAura 1.1s linear infinite;
+  filter: blur(14px);
+  z-index: 0;
+}
+
+.btn-livechat::after {
+  content: "";
+  position: absolute;
+  inset: 2px;
+  background: linear-gradient(to bottom, #ff2e2e 0%, #8f0000 100%);
+  border-radius: 10px;
+  z-index: 1;
+}
+
+.btn-livechat span {
+  position: relative;
+  z-index: 3;
+  text-shadow: 0 0 6px rgba(255,255,255,0.18);
+}
+
+@keyframes putarAura {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+	   .info-box {
+  width: 100%;
+  max-width: 380px;
+  margin: 12px auto 0 auto;
+  padding: 14px 16px;
+  border: 2px solid #ff2e2e;
+  border-radius: 0;
+  background: rgba(0, 0, 0, 0.88);
+  box-shadow:
+    0 0 10px rgba(255, 0, 0, 0.18),
+    inset 0 0 12px rgba(255, 0, 0, 0.08);
+}
+
+.info-box p {
+  margin: 0 0 10px 0;
+  color: #ffffff;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.info-box p:last-child {
+  margin-bottom: 0;
+}
+
+.info-box span {
+  display: inline-block;
+  font-weight: 700;
+  color: #ffffff;
+  background: transparent;
+  padding: 0;
+  margin-right: 6px;
+}
+
+.copyright {
+  width: 100%;
+  max-width: 380px;
+  margin: 12px auto 0 auto;
+  text-align: center;
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 700;
+  text-shadow: 0 0 8px rgba(255, 255, 255, 0.15);
+}
+      .nagaterbang {
+         position: fixed;
+         z-index: 1;
+         left: 0;
+         right: 0;
+         top: 0;
+         bottom: 0;
+         margin: auto;
+      }
+   </style>
 </head>
-
 <body>
+  <div class="container">
+    <header>
+      <center>
+        <a href="https://starlight1688.pages.dev/">
+          <amp-img
+            id="image"
+            class="animated tada infinite slower"
+            src="https://i.postimg.cc/nhn7L7KR/gacorbang.gif"
+            alt="SLOT"
+            width="250"
+            height="90"
+            layout="fixed">
+          </amp-img>
+        </a>
+      </center>
+    </header>
 
-<div id="loader">
-    <div class="loader-text">LOADING...</div>
+    <div class="welcome">
+      <h3></h3>
+    </div>
+
+    <div class="poster-wrap">
+  <amp-img
+    class="banner"
+    src="https://starlight1688.pages.dev/apex.png"
+    width="380"
+    height="400"
+    layout="responsive">
+  </amp-img>
 </div>
 
-<canvas id="bg"></canvas>
+    <a href="https://fgx.me/ywocph" target="_blank" rel="noreferrer noopener"
+      role="button" class="btn-livechat"><span>GABUNG SEKARANG</span></a>
 
-<header>
-    <div class="logo">WUJUD4D</div>
-</header>
-
-<section class="hero">
-    <h1>WUJUD4D SITUS GACOR TAHUN INI !!</h1>
-    <p>SEGERA DAFTARKAN AKUNMU DAN RASAKAN SENSASI PUTARANNYA !!</p>
-    <button class="btn primary" onclick="goWA()">DAFTAR</button>
-    <button class="btn secondary" onclick="goWA()">LOGIN</button>
-</section>
-
-<div class="stats">
-    <div class="stat">
-        <h2>10K+</h2>
-        <p>Users</p>
+    <div class="info-box">
+      <p><span>Nama:</span> WUJUD4D</p>
+      <p><span>Payment:</span> QRIS, Bank Transfer &amp; E-Wallet</p>
+      <p><span>Deposit:</span> Rp 10.000</p>
+      <p><span>Withdraw:</span> Rp 50.000</p>
     </div>
-    <div class="stat">
-        <h2>24/7</h2>
-        <p>Online</p>
-    </div>
-    <div class="stat">
-        <h2>Fast</h2>
-        <p>System</p>
-    </div>
-</div>
 
-<section class="section">
-    <h2>Keunggulan</h2>
-    <div class="cards">
-        <div class="card">⚡ Proses Cepat</div>
-        <div class="card">🔒 Server Aman</div>
-        <div class="card">📱 Mobile</div>
-        <div class="card">🔥 Tampilan Modern</div>
-    </div>
-</section>
-
-<section class="section">
-    <h2>Daftar</h2>
-    <div class="form-box">
-        <input placeholder="Username">
-        <input placeholder="Password">
-        <button class="submit">Daftar</button>
-    </div>
-</section>
-
-<section class="section">
-    <h2>FAQ</h2>
-    <div class="faq">
-        <h4>Apa ini?</h4>
-        <p>SITRUS GACOR TAHUN INI !!.</p>
-        <h4>Cara daftar?</h4>
-        <p>Klik tombol daftar !!.</p>
-    </div>
-</section>
-
-<footer>
-© 2026 WUJUD4D
-</footer>
-
-<script>
-// LOADER
-window.onload = ()=>{document.getElementById("loader").style.display="none";}
-
-// PARTICLES
-let c=document.getElementById("bg");
-let ctx=c.getContext("2d");
-c.width=window.innerWidth;
-c.height=window.innerHeight;
-
-let dots=[];
-for(let i=0;i<100;i++){
-    dots.push({x:Math.random()*c.width,y:Math.random()*c.height});
-}
-
-function draw(){
-    ctx.clearRect(0,0,c.width,c.height);
-    ctx.fillStyle="red";
-    dots.forEach(d=>{
-        ctx.beginPath();
-        ctx.arc(d.x,d.y,2,0,Math.PI*2);
-        ctx.fill();
-        d.y+=0.3;
-        if(d.y>c.height)d.y=0;
-    });
-    requestAnimationFrame(draw);
-}
-draw();
-
-// WA
-function goWA(){
-    window.location.href="https://wa.me/628xxxxxxx";
-}
-</script>
-
+    <p class="copyright">SITUS GACOR &amp; GAMPANG MAXWIN !</p>
+  </div>
 </body>
 </html>
